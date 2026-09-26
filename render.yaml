@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: blindnav-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 3001
+    healthCheckPath: /api/status
